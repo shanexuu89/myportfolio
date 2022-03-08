@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from "styled-components"
+import BgImage from '../images/banner.gif'
+import { GlobalStyle } from "../components/styles/GlobalStyles"
 
 
 function Loader() {
     return (
-        
+            
             <LoadWraper>
+            <GlobalStyle/>
             <LoaderH1>Yun Xu</LoaderH1>
             <LoaderH2>Portfolio</LoaderH2>
             </LoadWraper>
@@ -22,9 +25,10 @@ const LoadWraper = styled.div`
    align-items: center;
    justify-content: center;
    flex-direction: column;
-   background-color: #191919;
+   background: url(${BgImage});
    color: #9B988B;
    font-family: Montserrat;
+   text-align: center;
 
 `
 

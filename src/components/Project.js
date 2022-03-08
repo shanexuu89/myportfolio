@@ -47,7 +47,7 @@ const images = [
         <ProjectWrapper id="project">
         <ProjectsItem>
            <ProjectTitle>{title}</ProjectTitle>
-            <ProjectDetail>{detail}</ProjectDetail>
+           <ProjectDetail>{detail}</ProjectDetail>
           <ProjectImg style={{ backgroundImage: `url(${src})`}}></ProjectImg>
         </ProjectsItem>
         </ProjectWrapper>
@@ -97,8 +97,9 @@ const ProjectsItem = styled.div`
     position: flex;
     width: 100vw;
     height: 40vh;
+
     @media screen and (max-width: 768px) {
-      height: 70vh;
+      height: 14vh;
     }
 
     
@@ -115,7 +116,7 @@ const ProjectImg = styled.div`
     transform-origin: center;
     width: 28vw;
     height: 33vh;
-    left: 48%;
+    left: 60%;
     z-index: 1;
     bottom: 25%;
     transition: transform .2s ease-in-out;
@@ -124,9 +125,21 @@ const ProjectImg = styled.div`
     @media screen and (max-width: 1024px) {
       justify-content: center;
       align-items: center;
-      width: 100vw;
-      height: 50vh;
-      left: auto;
+      top: 20%;
+      width: 70vw;
+      height: 28vh;
+      left: 10%;
+  
+    }
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      align-items: center;
+      width: 50vw;
+      height: 15vh;
+      left: 45%;
+      bottom: 70%;
+      top: -12%;
   
     }
 
@@ -146,7 +159,7 @@ const ProjectTitle = styled.h2`
     color: transparent;
     will-change: transform;
     color: #9B988B;
-    width: 45vw;
+    width: 50vw;
     opacity: 0.8;
     
     &:hover ~ ${ProjectImg} {
@@ -164,7 +177,8 @@ const ProjectTitle = styled.h2`
   }
     @media screen and (max-width: 768px) {
       position: flex;
-      font-size: 2rem;
+      font-size: 1.2rem;
+      width: 70vw;
 
     }
 
@@ -182,6 +196,16 @@ const ProjectDetail = styled.div`
     z-index: 33;
     will-change: transform;
     word-wrap: break-word;
+
+    @media screen and (max-width: 768px) {
+      position: flex;
+      font-size: 0.8rem;
+      left: 20%;
+      width: 40vw;
+      bottom: 15%;
+
+
+    }
     
 
 `
